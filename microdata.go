@@ -212,6 +212,11 @@ func (p *Parser) readItem(item *Item, node *html.Node) *Item {
 
 				})
 				propertyValue = text.String()
+				if len(propertyValue) == 0 {
+					if val, exists := getAttr("content", node); exists {
+						propertyValue = val
+					}
+				}
 			}
 
 			if len(propertyValue) > 0 {
