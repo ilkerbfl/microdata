@@ -1,4 +1,4 @@
-module github.com/iand/microdata
+module github.com/ilkerbfl/microdata
 
 go 1.16
 
